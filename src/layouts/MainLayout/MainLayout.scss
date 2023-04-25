@@ -1,0 +1,15 @@
+.main-layout{
+  height: 100vh;
+
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 290px auto 108px;
+  // margin: 50px 22px 20px 0px;
+  gap:  0px;
+  .main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(127, 127, 185, 0.21);
+  }
+}
