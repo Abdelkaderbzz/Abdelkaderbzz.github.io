@@ -1,5 +1,5 @@
-
-
+import { green } from '@mui/material/colors'
+import { width } from '@mui/system'
 import React, { useState, useEffect } from 'react'
 
 type ShapeType = 'red-circle' | 'yellow-triangle' | 'blue-rectangle'
@@ -24,16 +24,16 @@ function Shape({ type, x, y, speed, rotation, color }: Shape): JSX.Element {
       width: 20,
       height: 20,
       border: `2px solid ${color}`,
-      borderRadius:'50%',
+      borderRadius: '50%',
       transform: `rotate(${rotation}deg)`,
     }
   } else if (type === 'yellow-triangle') {
     shapeStyle = {
       width: 0,
       height: 0,
-      borderLeft: '10px solid transparent',
-      borderRight: '10px solid transparent',
-      borderBottom: '20px solid yellow',
+      borderStyle: 'solid',
+      borderWidth: '0 15px 20px 15px',
+      borderColor:`transparent transparent ${color} transparent`,
       transform: `rotate(${rotation}deg)`,
     }
   } else {
@@ -55,19 +55,13 @@ function Animation(): JSX.Element {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const colors = [
-      
-        '#FF2E00',
-        '#FFB400',
-        '#05FF00',
-        '#0047FF',
-      ]
+      const colors = ['#ff2f006d', '#ffb30060','#04ff0070', '#0048ff67']
       const newShape = {
         type: ['red-circle', 'yellow-triangle', 'blue-rectangle'][
           getRandomInt(7)
         ],
-        x: getRandomInt(window.innerWidth - 20),
-        y: -10,
+        x: getRandomInt(900),
+        y: -getRandomInt(900),
         speed: getRandomInt(4) + 1,
         rotation: getRandomInt(360),
         color: colors[getRandomInt(colors.length)],
@@ -93,7 +87,8 @@ function Animation(): JSX.Element {
   }, [shapes])
 
   return (
-    <div style={{ height: '0px', position: 'relative' }}>
+
+    <div style={{ height: '0', zIndex: '-9', position: 'relative' }}>
       {shapes.map((shape, i) => (
         <Shape
           key={i}
