@@ -8,10 +8,13 @@
   margin-top: 70px;
   margin-bottom: 70px;
   .review-title {
+ 
     font-weight: 700;
     font-size: 32px;
     margin-bottom: 25px;
     color: $primaryblack;
+    text-align: center;
+    
   }
   .reviewer-paragraph {
     h2 {
@@ -27,6 +30,7 @@
     }
   }
   .review-description {
+    text-align: center !important;
     margin-bottom: 50px;
     color: $primaryGray;
     font-weight: 400;

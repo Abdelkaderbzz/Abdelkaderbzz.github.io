@@ -55,7 +55,7 @@ function Animation(): JSX.Element {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const colors = ['#ff2f006d', '#ffb30060','#04ff0070', '#0048ff67']
+      const colors = ['#ff2f00be', '#ffb300b2','#04ff00b7', '#0048ffb9']
       const newShape = {
         type: ['red-circle', 'yellow-triangle', 'blue-rectangle'][
           getRandomInt(7)
@@ -79,7 +79,7 @@ function Animation(): JSX.Element {
           .map((shape) => {
             return { ...shape, y: shape.y + shape.speed }
           })
-          .filter((shape) => shape.y < window.innerHeight)
+          .filter((shape) => shape.y < 500)
       )
     })
 
