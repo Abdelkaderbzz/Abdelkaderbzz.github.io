@@ -1,6 +1,5 @@
 @import './../../assets/styles/abstracts/';
 .left-bar {
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -22,12 +21,12 @@
       font-weight: 400;
       font-size: 15px;
       margin-bottom: 15px;
-      color:$primaryGray;
+      color: $primaryGray;
     }
     .social-media-link {
       display: flex;
       gap: 15px;
-      a{
+      a {
         width: 28px;
         height: 28px;
         background-color: $primaryYellow;
@@ -38,18 +37,19 @@
       }
     }
   }
-  .languages-skills{
+  .languages-skills {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    .languages,.skills{
-      h2{
+    .languages,
+    .skills {
+      h2 {
         margin-bottom: 15px;
         color: rgba(0, 0, 0, 0.648);
       }
     }
   }
-  .btn-install{
+  .btn-install {
     width: 100%;
     border: none;
     outline: none;
@@ -63,4 +63,25 @@
     padding: 12px 0px;
     cursor: pointer;
   }
+}
+.close_sidebar_trigger {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  opacity: 75%;
+}
+.sidebar {
+  z-index: 9;
+  overflow-y: scroll;
+  transition: 0.8s;
+  height: 100%;
+  @media only screen and (max-width: 1290px) {
+    position: absolute;
+    background-color: #fff;
+  }
+}
+.open {
+  transform: translate(-100%);
+  transition: 0.8s;
 }

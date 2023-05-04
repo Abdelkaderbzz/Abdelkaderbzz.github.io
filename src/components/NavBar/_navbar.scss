@@ -1,0 +1,14 @@
+.navigation {
+  transition: 0.8s;
+  height: 100%;
+  overflow-y: scroll;
+  @media only screen and (max-width: 1290px) {
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+  }
+}
+.is_open {
+  transform: translate(100%);
+  transition: 0.8s;
+}

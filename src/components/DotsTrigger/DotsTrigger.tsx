@@ -7,7 +7,8 @@ import {
 import { width } from '@mui/system'
 import useWindowSize from '../../hooks/useWindowSize'
 import { HiOutlineDotsVertical } from 'react-icons/hi'
-import { GrClose } from 'react-icons/gr';
+import { GrClose } from 'react-icons/gr'
+import { TfiArrowCircleRight } from 'react-icons/tfi';
 
 const DotsTrigger = () => {
   const { isNavigationbarOpened } = useSelector<RootState, settingsState>(
@@ -18,13 +19,12 @@ const DotsTrigger = () => {
 
   if (width >= 1290) return null
   return (
-    <div
-      className='dots_button'
-      onClick={() => dispatch(toggleNavigation())}
-    >
-      {
-        isNavigationbarOpened ? <HiOutlineDotsVertical className='menu-icon' /> : <GrClose className='menu-icon'/>
-      }
+    <div className='dots_button' onClick={() => dispatch(toggleNavigation())}>
+      {isNavigationbarOpened ? (
+        <HiOutlineDotsVertical className='menu-icon' />
+      ) : (
+        <TfiArrowCircleRight className='menu-icon' />
+      )}
     </div>
   )
 }
