@@ -99,7 +99,7 @@ const LeftBar = () => {
         <ExtraSkills />
 
         <a
-          href='./../../../public/CV.pdf'
+          href='CV.pdf'
           download={'CV.pdf'}
           className='btn-install'
         >
