@@ -1,0 +1,19 @@
+$primaryblack: #2B2B2B;
+$secondaryblack: #242526;
+$primaryYellow: #FFB400;
+$white: #F0F0F6;
+$primaryGray: #767676;
+
+
+$themes: (
+  light: (
+    colorText: #000,
+    colorBackground: #fff,
+  ),
+  dark: (
+    colorText: #eff2f7,
+    colorBackgroundFirst:rgb(24,25,26),
+    colorBackground: #242526,
+
+  ),
+);
